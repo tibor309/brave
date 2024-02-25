@@ -1,5 +1,8 @@
 FROM ghcr.io/linuxserver/baseimage-kasmvnc:debianbookworm
 
+# set labels
+LABEL maintainer="tibor309"
+
 # title
 ENV TITLE=Brave
 
