@@ -16,7 +16,7 @@ To set up the container, you can either use docker-compose or the docker cli. Yo
 ---
 services:
   brave:
-    image: tibor309/docker-brave:latest
+    image: tibor309/brave:latest
     container_name: brave-browser
     security_opt:
       - seccomp:unconfined #optional
@@ -51,7 +51,7 @@ docker run -d \
   --shm-size="1gb" \
   --restart unless-stopped \
   --hostname brave `#optional` \
-  tibor309/docker-brave:latest
+  tibor309/brave:latest
 ```
 
 ## Config
