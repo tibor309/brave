@@ -72,7 +72,7 @@ Containers are configured using parameters passed at runtime (such as those abov
 | `--hostname brave` | Hostname for the container. It is advised to change this to your own if you're planning to use brave sync. |
 
 ## Usage
-To access the container, navigate to the ip address with the port you provided at the setup.
+To access the container, navigate to the ip address for your machine with the port you provided at the setup.
 
 * [http://yourhost:3000/][link]
 * [https://yourhost:3001/][link]
