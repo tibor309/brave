@@ -2,8 +2,13 @@ FROM ghcr.io/linuxserver/baseimage-kasmvnc:debianbookworm
 
 # set labels
 LABEL maintainer="tibor309"
+LABEL org.opencontainers.image.description="Web accessible Brave browser."
+LABEL org.opencontainers.image.source=https://github.com/tibor309/brave
+LABEL org.opencontainers.image.licenses=GPL-3.0
 
-# title
+# environment settings
+ARG DEBIAN_FRONTEND="noninteractive"
+ENV HOME="/config"
 ENV TITLE=Brave
 
 RUN \
