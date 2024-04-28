@@ -1,9 +1,13 @@
 FROM ghcr.io/linuxserver/baseimage-kasmvnc:debianbookworm
 
 # set labels
+ARG BUILD_DATE
+ARG VERSION
+LABEL build_version="Linuxserver.io version: ${VERSION} Build-date: ${BUILD_DATE}"
 LABEL maintainer="tibor309"
-LABEL org.opencontainers.image.description="Web accessible Brave browser."
+LABEL org.opencontainers.image.description=Web accessible Brave browser.
 LABEL org.opencontainers.image.source=https://github.com/tibor309/brave
+LABEL org.opencontainers.image.url=https://github.com/tibor309/brave/packages
 LABEL org.opencontainers.image.licenses=GPL-3.0
 
 # environment settings
