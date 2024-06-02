@@ -51,7 +51,7 @@ docker run -d \
 
 ## Config
 
-You can find additional parameters and settings from the [linuxserver/chromium][chromium-setup] project page!
+You can find additional parameters and settings from the [linuxserver/docker-chromium][chromium-setup] project page!
 
 | Parameter | Function |
 | :----: | --- |
