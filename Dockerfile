@@ -19,10 +19,10 @@ RUN \
   echo "**** add icon ****" && \
   curl -o \
     /kclient/public/icon.png \
-    https://raw.githubusercontent.com/tibor309/icons/master/icons/brave/brave_lionface_logo_647x786.png && \
+    https://raw.githubusercontent.com/tibor309/icons/main/icons/brave/brave_logo_256x256.png && \
   curl -o \
     /kclient/public/favicon.ico \
-    https://raw.githubusercontent.com/tibor309/icons/master/icons/brave/brave_lionface_icon_128x128.ico && \
+    https://raw.githubusercontent.com/tibor309/icons/main/icons/brave/brave_icon_32x32.ico && \
   echo "**** install packages ****" && \
   curl -fsSLo \
     /usr/share/keyrings/brave-browser-archive-keyring.gpg \
