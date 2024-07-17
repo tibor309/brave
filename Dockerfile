@@ -19,19 +19,19 @@ RUN \
   echo "**** add icon ****" && \
   curl -o \
     /kclient/public/icon.png \
-    https://raw.githubusercontent.com/tibor309/icons/master/icons/brave/brave_lionface_logo_647x786.png && \
+    https://raw.githubusercontent.com/tibor309/icons/main/icons/brave/brave_nightly_logo_256x256.png && \
   curl -o \
     /kclient/public/favicon.ico \
-    https://raw.githubusercontent.com/tibor309/icons/master/icons/brave/brave_lionface_icon_128x128.ico && \
+    https://raw.githubusercontent.com/tibor309/icons/main/icons/brave/brave_nightly_icon_32x32.ico && \
   echo "**** install packages ****" && \
   curl -fsSLo \
-    /usr/share/keyrings/brave-browser-archive-keyring.gpg \
-    https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg && \
-  echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list && \
+    /usr/share/keyrings/brave-browser-nightly-archive-keyring.gpg \
+    https://brave-browser-apt-nightly.s3.brave.com/brave-browser-nightly-archive-keyring.gpg && \
+    echo "deb [signed-by=/usr/share/keyrings/brave-browser-nightly-archive-keyring.gpg] https://brave-browser-apt-nightly.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-nightly.list && \
   apt-get update && \
   apt-get install -y --no-install-recommends \
     brave-keyring \
-    brave-browser && \
+    brave-browser-nightly && \
   echo "**** cleanup ****" && \
   apt-get autoclean && \
   rm -rf \

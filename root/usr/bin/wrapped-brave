@@ -1,10 +1,10 @@
 #!/bin/bash
 
-BIN=/usr/bin/brave-browser-stable
+BIN=/usr/bin/brave-browser-nightly
 
 # Cleanup
-if ! pgrep brave-browser-stable > /dev/null;then
-  rm -f $HOME/.config/BraveSoftware/Brave-Browser/Singleton*
+if ! pgrep brave-browser-nightly > /dev/null;then
+  rm -f $HOME/.config/BraveSoftware/Brave-Browser-Nightly/Singleton*
 fi
 
 # Run normally on privved containers or modified un non priv

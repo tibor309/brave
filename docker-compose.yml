@@ -1,8 +1,8 @@
 ---
 services:
   brave:
-    image: ghcr.io/tibor309/brave:latest
-    container_name: brave-browser
+    image: ghcr.io/tibor309/brave:nightly
+    container_name: brave-browser-nightly
     security_opt:
       - seccomp:unconfined #optional
     environment:
@@ -10,10 +10,10 @@ services:
       - PGID=1000
       - TZ=Etc/UTC
     volumes:
-      - /brave:/config
+      - /brave-nightly:/config
     ports:
       - 3000:3000
       - 3001:3001
     shm_size: "1gb"
     restart: unless-stopped
-    hostname: brave #optional
+    hostname: brave-nightly #optional

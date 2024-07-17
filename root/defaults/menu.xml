@@ -6,7 +6,7 @@
             <command>/usr/bin/xterm</command>
             </action>
         </item>
-        <item label="Brave" icon="/usr/share/icons/hicolor/48x48/apps/brave-browser.png">
+        <item label="Brave" icon="/usr/share/icons/hicolor/128x128/apps/brave-browser-nightly.png">
             <action name="Execute">
             <command>/usr/bin/wrapped-brave</command>
             </action>
