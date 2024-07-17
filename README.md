@@ -4,6 +4,7 @@ This container allows you to access the [brave web browser][brave] trough anothe
 ## Setup
 
 To set up the container, you can either use docker-compose or the docker cli. You can also use options and additional settings/mods from linuxserver.io.
+[Beta][beta_build] and [nightly][nightly_build] versions of the browser are also available!
 
 ### [docker-compose][dcompose] (recommended)
 
@@ -72,6 +73,9 @@ To access the container, navigate to the ip address for your machine with the po
 * [http://yourhost:3000/][link]
 * [https://yourhost:3001/][link]
 
+
+[beta_build]: https://github.com/tibor309/brave/tree/beta
+[nightly_build]: https://github.com/tibor309/brave/tree/nightly
 
 [brave]: https://brave.com/
 [kasm]: https://kasmweb.com/kasmvnc
