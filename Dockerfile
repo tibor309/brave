@@ -13,7 +13,7 @@ LABEL org.opencontainers.image.licenses=GPL-3.0
 # environment settings
 ARG DEBIAN_FRONTEND="noninteractive"
 ENV HOME="/config"
-ENV TITLE=Brave
+ENV TITLE=" Nightly"
 
 RUN \
   echo "**** add icon ****" && \
