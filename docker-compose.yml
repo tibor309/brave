@@ -1,7 +1,7 @@
 ---
 services:
   brave:
-    image: ghcr.io/tibor309/brave:latest
+    image: ghcr.io/tibor309/brave:stable
     container_name: brave-browser
     security_opt:
       - seccomp:unconfined #optional
