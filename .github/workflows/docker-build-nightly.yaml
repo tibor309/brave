@@ -1,10 +1,10 @@
-name: Build image for nightly
+name: Scheduled rebuild - nightly
 on:
   schedule:
     - cron: "10 0 */3 * *"
 
 jobs:
-  Build:
+  rebuild-nightly:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
