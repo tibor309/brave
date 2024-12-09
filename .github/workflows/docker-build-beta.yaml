@@ -4,8 +4,28 @@ on:
     - cron: "10 0 1,15 * *"
 
 jobs:
+  get-version-beta:
+    runs-on: ubuntu-latest
+    outputs:
+      PKG_VER: ${{ steps.getver.outputs.PKG_VER }}
+    steps:
+      - name: Add package source to APT
+        run: |
+          sudo apt install curl -y
+          sudo curl -fsSLo /usr/share/keyrings/brave-browser-beta-archive-keyring.gpg https://brave-browser-apt-beta.s3.brave.com/brave-browser-beta-archive-keyring.gpg
+          echo "deb [signed-by=/usr/share/keyrings/brave-browser-beta-archive-keyring.gpg] https://brave-browser-apt-beta.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-beta.list
+          sudo apt update
+
+      - name: Get package version
+        id: getver
+        run: |
+          PKG_VER=$(apt list brave-browser-beta | awk -F'[ /]' '/brave-browser-beta/ {print $3}')
+          echo "PKG_VER=${PKG_VER}" >> $GITHUB_OUTPUT
+          echo "The package version is $PKG_VER"
+
   rebuild-beta:
     runs-on: ubuntu-latest
+    needs: get-version-beta
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -31,4 +51,6 @@ jobs:
           context: .
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: ghcr.io/tibor309/brave:beta
+          tags: |
+            ghcr.io/tibor309/brave:beta
+            ghcr.io/tibor309/brave:${{ needs.get-version-beta.outputs.PKG_VER }}
