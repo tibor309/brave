@@ -19,7 +19,7 @@ jobs:
   get-version:
     runs-on: ubuntu-latest
     outputs:
-      PKG_VER: ${{ steps.getver.outputs.PKG_VER }}
+      PKG_VER: ${{ steps.version.outputs.PKG_VER }}
     steps:
       - name: Add package source to APT
         run: |
@@ -29,7 +29,7 @@ jobs:
           sudo apt update
 
       - name: Get package version
-        id: getver
+        id: version
         run: |
           PKG_VER=$(apt list brave-browser | awk -F'[ /]' '/brave-browser/ {print $3}')
           echo "PKG_VER=${PKG_VER}" >> $GITHUB_OUTPUT
@@ -69,4 +69,4 @@ jobs:
           tags: |
             ghcr.io/tibor309/brave:latest
             ghcr.io/tibor309/brave:stable
-            ghcr.io/tibor309/brave:${{ needs.get-version-stable.outputs.PKG_VER }}
+            ghcr.io/tibor309/brave:${{ needs.get-version.outputs.PKG_VER }}
