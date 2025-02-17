@@ -1,10 +1,8 @@
 # 🦁 Brave Browser
-This container allows you to access the [brave web browser][brave] trough another web browser using [kasmvnc][kasm].
+This container allows you to use [brave][brave] trough another web browser using [kasmvnc][kasm].
 
 ## Setup
-
-To set up the container, you can either use docker-compose or the docker cli. You can also use options and additional settings/mods from linuxserver.io.
-[Beta][beta_build] and [nightly][nightly_build] versions of the browser are also available!
+To set up the container, you can either use docker-compose or the docker cli. You can also use options and additional settings/mods from linuxserver.io. For updating the container, simply re-pull the image, and deploy it. The [beta][beta_build] and [nightly][nightly_build] versions of the browser are also available!
 
 ### [docker-compose][dcompose] (recommended)
 
@@ -51,8 +49,7 @@ docker run -d \
 ```
 
 ## Config
-
-You can find additional parameters and settings from the [linuxserver/docker-chromium][chromium-setup] project page!
+You can also use additional parameters and settings from the [linuxserver/docker-chromium][chromium-setup] project!
 
 | Parameter | Function |
 | :----: | --- |
