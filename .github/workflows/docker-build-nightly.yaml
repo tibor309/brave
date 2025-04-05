@@ -1,4 +1,4 @@
-name: Scheduled rebuild - nightly
+name: "Build Docker image for nightly channel"
 on:
   schedule:
     - cron: "10 0 */3 * *"

@@ -1,4 +1,4 @@
-name: Scheduled rebuild - stable
+name: "Build Docker image for stable channel"
 on:
   schedule:
     - cron: "10 0 1 * *"
