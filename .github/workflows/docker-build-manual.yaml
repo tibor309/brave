@@ -38,7 +38,7 @@ jobs:
           echo "PKG_VER=${PKG_VER}" >> $GITHUB_OUTPUT
           echo "The package version is $PKG_VER"
 
-  rebuild:
+  build-image:
     runs-on: ubuntu-latest
     needs: [get-date, get-version]
     steps:
