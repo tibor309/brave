@@ -4,8 +4,8 @@ on:
     - cron: "10 0 1 * *"
 
 permissions:
-      contents: read
-      packages: write
+  contents: read
+  packages: write
 
 jobs:
   get-date:
