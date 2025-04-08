@@ -8,5 +8,5 @@ This is the [nightly][nightly_version] of the browser,  updated every three days
 To use this version, change the docker image tag to `nightly`. You can read more about setup options on the [main page][main_repo].
 
 
-[nightly_ver]: https://brave.com/download-nightly/
+[nightly_version]: https://brave.com/download-nightly/
 [main_repo]: https://github.com/tibor309/brave/tree/main
