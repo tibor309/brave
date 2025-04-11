@@ -1,0 +1,7 @@
+#!/usr/bin/with-contenv bash
+
+# Load rc config for openbox
+if [[ ! -f /config/.config/openbox/rc.xml ]]; then
+  cp /defaults/rc.xml /config/.config/openbox/rc.xml && \
+  chown -R abc:abc /config/.config/rc.xml
+fi
