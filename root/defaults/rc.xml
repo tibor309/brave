@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openbox_config xmlns="http://openbox.org/3.4/rc" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <theme>
+        <name>Clearlooks</name>
+        <titleLayout>NLMC</titleLayout>
+        <keepBorder>no</keepBorder>
+        <animateIconify>no</animateIconify>
+        <font place="ActiveWindow">
+            <name>sans</name>
+            <size>8</size>
+            <weight>bold</weight>
+            <slant>normal</slant>
+        </font>
+        <font place="InactiveWindow">
+            <name>sans</name>
+            <size>8</size>
+            <weight>bold</weight>
+            <slant>normal</slant>
+        </font>
+        <font place="MenuHeader">
+            <name>sans</name>
+            <size>9</size>
+            <weight>normal</weight>
+            <slant>normal</slant>
+        </font>
+        <font place="MenuItem">
+            <name>sans</name>
+            <size>9</size>
+            <weight>normal</weight>
+            <slant>normal</slant>
+        </font>
+        <font place="ActiveOnScreenDisplay">
+            <name>sans</name>
+            <size>9</size>
+            <weight>bold</weight>
+            <slant>normal</slant>
+        </font>
+        <font place="InactiveOnScreenDisplay">
+            <name>sans</name>
+            <size>9</size>
+            <weight>bold</weight>
+            <slant>normal</slant>
+        </font>
+    </theme>
+    <desktops>
+        <number>1</number>
+        <firstdesk>1</firstdesk>
+        <popupTime>0</popupTime>
+    </desktops>
+    <keyboard>
+        <global>
+            <keybind key="A-F4">
+                <action name="Close"/>
+            </keybind>
+        </global>
+    </keyboard>
+    <mouse>
+        <dragThreshold>1</dragThreshold>
+        <doubleClickTime>500</doubleClickTime>
+        <clickToFocus>yes</clickToFocus>
+        <context name="Frame">
+            <mousebind button="A-Left" action="Press">
+                <action name="Focus"/>
+                <action name="Raise"/>
+            </mousebind>
+            <mousebind button="A-Left" action="Drag">
+                <action name="Move"/>
+            </mousebind>
+        </context>
+        <context name="Titlebar">
+            <mousebind button="Left" action="Drag">
+                <action name="Move"/>
+            </mousebind>
+            <mousebind button="Left" action="DoubleClick">
+                <action name="ToggleMaximize"/>
+            </mousebind>
+            <mousebind button="Right" action="Click">
+                <action name="Close"/>
+            </mousebind>
+        </context>
+        <context name="Titlebar Top Right Bottom Left TLCorner TRCorner BRCorner BLCorner">
+            <mousebind button="Left" action="Press">
+                <action name="Focus"/>
+                <action name="Raise"/>
+            </mousebind>
+            <mousebind button="Right" action="Press">
+                <action name="Focus"/>
+                <action name="Raise"/>
+                <action name="ShowMenu"><menu>client-menu</menu></action>
+            </mousebind>
+        </context>
+        <context name="TRCorner BRCorner TLCorner BLCorner">
+            <mousebind button="Left" action="Press">
+                <action name="Focus"/>
+                <action name="Raise"/>
+            </mousebind>
+            <mousebind button="Left" action="Drag">
+                <action name="Resize"/>
+            </mousebind>
+        </context>
+        <context name="TRCorner BRCorner TLCorner BLCorner">
+            <mousebind button="Left" action="Press">
+                <action name="Focus"/>
+                <action name="Raise"/>
+            </mousebind>
+            <mousebind button="Left" action="Drag">
+                <action name="Resize"/>
+            </mousebind>
+        </context>
+        <context name="Client">
+            <mousebind button="Left" action="Press">
+                <action name="Focus"/>
+                <action name="Raise"/>
+            </mousebind>
+            <mousebind button="Middle" action="Press">
+                <action name="Focus"/>
+                <action name="Raise"/>
+            </mousebind>
+            <mousebind button="Right" action="Press">
+                <action name="Focus"/>
+                <action name="Raise"/>
+            </mousebind>
+        </context>
+        <context name="Maximize">
+            <mousebind button="Left" action="Click">
+                <action name="ToggleMaximize"/>
+            </mousebind>
+        </context>
+        <context name="Close">
+            <mousebind button="Left" action="Click">
+                <action name="Close"/>
+            </mousebind>
+        </context>
+        <context name="Desktop">
+            <mousebind button="Right" action="Click">
+                <action name="Focus"/>
+                <action name="Raise"/>
+                <action name="ShowMenu">
+                    <menu>root-menu</menu>
+                </action>
+            </mousebind>
+        </context>
+    </mouse>
+    <margins>
+        <top>0</top>
+        <bottom>0</bottom>
+        <left>0</left>
+        <right>0</right>
+    </margins>
+    <menu>
+        <file>menu.xml</file>
+        <hideDelay>200</hideDelay>
+        <middle>no</middle>
+        <submenuShowDelay>100</submenuShowDelay>
+        <submenuHideDelay>400</submenuHideDelay>
+        <showIcons>yes</showIcons>
+        <manageDesktops>no</manageDesktops>
+    </menu>
+    <applications>
+        <application>
+            <focus>yes</focus>
+            <decor>yes</decor>
+            <border>yes</border>
+            <shade>no</shade>
+            <layer>normal</layer>
+            <maximized>no</maximized>
+            <fullscreen>no</fullscreen>
+            <position>
+                <x>center</x>
+                <y>center</y>
+            </position>
+        </application>
+        <application name="brave-browser" role="browser">
+            <focus>yes</focus>
+            <decor>no</decor>
+            <border>no</border>
+            <shade>no</shade>
+            <layer>below</layer>
+            <maximized>yes</maximized>
+            <fullscreen>no</fullscreen>
+            <position force="yes">
+                <x>center</x>
+                <y>center</y>
+            </position>
+        </application>
+    </applications>
+</openbox_config>
