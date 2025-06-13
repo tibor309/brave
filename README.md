@@ -1,10 +1,29 @@
-# 🦁 Brave Browser
+[beta_build]: https://github.com/tibor309/brave/tree/beta
+[nightly_build]: https://github.com/tibor309/brave/tree/nightly
+
+[brave]: https://brave.com/
+[kasm]: https://kasmweb.com/kasmvnc
+[chromium-setup]: https://github.com/linuxserver/docker-chromium/blob/master/README.md#application-setup
+
+[dhub]: https://hub.docker.com/r/tibordev/brave
+[dcompose]: https://docs.linuxserver.io/general/docker-compose
+[dcli]: https://docs.docker.com/engine/reference/commandline/cli/
+[flags]: https://support.brave.com/hc/en-us/articles/360044860011-How-Do-I-Use-Command-Line-Flags-in-Brave
+[tz]: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List
+[link]: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+
+
+
+# 🦁 [Brave Browser][dhub]
 This container allows you to use the [brave][brave] web browser trough another web browser using [kasmvnc][kasm].
 
 ![brave](https://github.com/user-attachments/assets/8573341d-d7a2-403c-8ddd-4edf7e7172a3)
 
 ## Setup
 To set up the container, you can either use docker-compose or the docker cli. You can also use options and additional settings/mods from linuxserver.io. For updating the container, simply re-pull the image, and deploy it. The [beta][beta_build] and [nightly][nightly_build] versions of the browser are also available!
+
+> [!NOTE]
+> This image is also available on [Docker Hub][dhub] under `tibordev/brave`.
 
 ### [docker-compose][dcompose] (recommended)
 
@@ -71,18 +90,3 @@ To access the container, navigate to the ip address for your machine with the po
 
 * [http://yourhost:3000/][link]
 * [https://yourhost:3001/][link]
-
-
-[beta_build]: https://github.com/tibor309/brave/tree/beta
-[nightly_build]: https://github.com/tibor309/brave/tree/nightly
-
-[brave]: https://brave.com/
-[kasm]: https://kasmweb.com/kasmvnc
-[chromium-setup]: https://github.com/linuxserver/docker-chromium/blob/master/README.md#application-setup
-
-[dcompose]: https://docs.linuxserver.io/general/docker-compose
-[dcli]: https://docs.docker.com/engine/reference/commandline/cli/
-[flags]: https://support.brave.com/hc/en-us/articles/360044860011-How-Do-I-Use-Command-Line-Flags-in-Brave
-[tz]: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List
-[link]: https://www.youtube.com/watch?v=dQw4w9WgXcQ
-
