@@ -4,6 +4,7 @@
 [brave]: https://brave.com/
 [kasm]: https://kasmweb.com/kasmvnc
 [chromium-setup]: https://github.com/linuxserver/docker-chromium/blob/master/README.md#application-setup
+[repo]: https://github.com/tibor309/brave
 
 [dhub]: https://hub.docker.com/r/tibordev/brave
 [dcompose]: https://docs.linuxserver.io/general/docker-compose
@@ -14,7 +15,7 @@
 
 
 
-# 🦁 [Brave Browser][dhub]
+# 🦁 [Brave Browser][repo]
 This container allows you to use the [brave][brave] web browser trough another web browser using [kasmvnc][kasm].
 
 ![brave](https://github.com/user-attachments/assets/8573341d-d7a2-403c-8ddd-4edf7e7172a3)
