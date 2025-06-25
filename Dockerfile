@@ -3,14 +3,16 @@ FROM ghcr.io/linuxserver/baseimage-kasmvnc:debianbookworm
 # set labels
 ARG IMAGE_BUILD_DATE
 LABEL maintainer="tibor309"
-LABEL org.opencontainers.image.authors="tibor309"
+LABEL org.opencontainers.image.authors="Tibor (https://github.com/tibor309)"
 LABEL org.opencontainers.image.created="${IMAGE_BUILD_DATE}"
 LABEL org.opencontainers.image.title="Brave"
 LABEL org.opencontainers.image.description="Web accessible Brave browser."
-LABEL org.opencontainers.image.source=https://github.com/tibor309/brave
-LABEL org.opencontainers.image.url=https://github.com/tibor309/brave/packages
-LABEL org.opencontainers.image.licenses=GPL-3.0
+LABEL org.opencontainers.image.source="https://github.com/tibor309/brave"
+LABEL org.opencontainers.image.url="https://github.com/tibor309/brave/packages"
+LABEL org.opencontainers.image.licenses="GPL-3.0"
+LABEL org.opencontainers.image.documentation="https://github.com/tibor309/brave/blob/main/README.md"
 LABEL org.opencontainers.image.base.name="ghcr.io/linuxserver/baseimage-kasmvnc:debianbookworm"
+LABEL org.opencontainers.image.base.documentation="https://github.com/linuxserver/docker-chromium/blob/master/README.md"
 
 # branding
 ENV LSIO_FIRST_PARTY=false
