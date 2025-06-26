@@ -12,6 +12,9 @@ LABEL org.opencontainers.image.url=https://github.com/tibor309/brave/packages
 LABEL org.opencontainers.image.licenses=GPL-3.0
 LABEL org.opencontainers.image.base.name="ghcr.io/linuxserver/baseimage-kasmvnc:debianbookworm"
 
+# branding
+ENV LSIO_FIRST_PARTY=false
+
 # environment settings
 ARG DEBIAN_FRONTEND="noninteractive"
 ENV HOME="/config"
