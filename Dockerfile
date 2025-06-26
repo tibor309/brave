@@ -3,6 +3,7 @@ FROM ghcr.io/linuxserver/baseimage-selkies:debianbookworm
 # set labels
 ARG IMAGE_BUILD_DATE
 LABEL maintainer="tibor309"
+LABEL release_channel="stable"
 LABEL org.opencontainers.image.authors="Tibor (https://github.com/tibor309)"
 LABEL org.opencontainers.image.created="${IMAGE_BUILD_DATE}"
 LABEL org.opencontainers.image.title="Brave"
