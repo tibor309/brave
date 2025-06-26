@@ -1,12 +1,14 @@
-# 🦁 Brave Browser Nightly
-This is the [nightly][nightly_version] of the browser,  updated every three days.
+[brave]: https://brave.com/download-nightly/
+[main]: https://github.com/tibor309/brave/tree/main
 
-> [!NOTE]
-> Automatic builds has been paused for this version, due to lack of interest. If you need an updated version, you'll need to rebuild the image yourself!
+
+# 🦁 Brave Nightly
+[Brave Nightly][brave] is a testing and development version of Brave. The releases may contain bugs that can result in data loss. Brave Nightly automatically sends crash reports when things go wrong. The image of this build is updated every three days.
+
+![brave](https://github.com/user-attachments/assets/8573341d-d7a2-403c-8ddd-4edf7e7172a3)
 
 ## Setup
-To use this version, change the docker image tag to `nightly`. You can read more about setup options on the [main page][main_repo].
+To use this version of the app, change the docker image tag to `nightly`. For setup options and configuration, check the [main page][main].
 
-
-[nightly_version]: https://brave.com/download-nightly/
-[main_repo]: https://github.com/tibor309/brave/tree/main
+> [!WARNING]
+> Automatic builds has been paused for this version, due to lack of interest. If you need an updated version, you'll need to rebuild the image yourself!
