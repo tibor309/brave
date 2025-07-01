@@ -2,7 +2,8 @@
 // README at: https://github.com/devcontainers/templates/tree/main/src/docker-in-docker
 {
 	"name": "Brave",
-	"image": "mcr.microsoft.com/devcontainers/base:bullseye",
+	"image": "mcr.microsoft.com/devcontainers/base:bookworm",
+    "privileged": true,
 
 	"features": {
 		"ghcr.io/devcontainers/features/docker-in-docker:2": {
@@ -20,5 +21,16 @@
 		"ghcr.io/dhoeric/features/act:1": {
 			"version": "latest"
 		}
-	}
+	},
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-azuretools.vscode-containers",
+                "github.copilot",
+                "github.vscode-github-actions",
+                "eamodio.gitlens",
+                "yzhang.markdown-all-in-one"
+            ]
+        }
+    }
 }
