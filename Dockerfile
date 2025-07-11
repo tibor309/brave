@@ -28,10 +28,10 @@ RUN \
   echo "**** add icon ****" && \
   curl -o \
     /usr/share/selkies/www/icon.png \
-    https://raw.githubusercontent.com/tibor309/icons/main/icons/brave/brave_beta_logo_128x128.png && \
+    https://raw.githubusercontent.com/tibor309/icons/refs/heads/main/brave-beta/icon.png && \
   curl -o \
     /usr/share/selkies/www/favicon.ico \
-    https://raw.githubusercontent.com/tibor309/icons/main/icons/brave/brave_beta_icon_32x32.ico && \
+    https://raw.githubusercontent.com/tibor309/icons/refs/heads/main/brave-beta/favicon.ico && \
   echo "**** install packages ****" && \
   curl -fsSLo \
     /usr/share/keyrings/brave-browser-beta-archive-keyring.gpg \
