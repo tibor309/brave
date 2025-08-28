@@ -25,10 +25,8 @@ This container allows you to use [Brave][brave] remotely trough another web brow
 ## Setup
 To set up the container, you can use docker-compose or the docker cli. Unless a parameter is flagged as 'optional', it is *mandatory* and a value must be provided. This container is using a linuxserver.io base, so you can use their [mods][lsmods] and configurations to enable additional functionality within the container.
 
-> [!TIP]
-> Other editions of the browser are also available! To use any of them, simply change the image tag to your desired edition.
-> * [beta][beta_build]
-> * [nightly][nightly_build]
+> [!WARNING]
+> The [beta][beta_build] and [nightly][nightly_build] editions of the browser will be removed soon! If you use any of them, clone this project, and build your own image!
 
 > [!NOTE]
 > This image is also available on [Docker Hub][dhub] under `tibordev/brave`.
