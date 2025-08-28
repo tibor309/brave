@@ -1,5 +1,4 @@
 name: "Build Docker image - beta"
-description: "Builds the Docker image for the beta release and pushes it to the GitHub Container Registry and Docker Hub. This workflow is triggered on the 1st and 15th day of each month at 00:10 UTC, or manually via workflow_dispatch."
 on:
   schedule:
     - cron: "10 0 1,15 * *"
@@ -58,13 +57,13 @@ jobs:
         uses: docker/login-action@v3
         with:
           registry: ghcr.io
-          username: tibor309
+          username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Login to Docker Hub
         uses: docker/login-action@v3
         with:
-          username: tibordev
+          username: ${{ vars.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Set up QEMU
@@ -83,7 +82,7 @@ jobs:
           build-args: |
             IMAGE_BUILD_DATE=${{ needs.get_date.outputs.IMG_DATE }}
           tags: |
-            ghcr.io/tibor309/brave:beta
-            ghcr.io/tibor309/brave:${{ needs.get_pkg_version.outputs.PKG_VER }}
-            tibordev/brave:beta
-            tibordev/brave:${{ needs.get_pkg_version.outputs.PKG_VER }}
+            ghcr.io/${{ github.repository_owner }}/brave:beta
+            ghcr.io/${{ github.repository_owner }}/brave:${{ needs.get_pkg_version.outputs.PKG_VER }}
+            ${{ vars.DOCKERHUB_USERNAME }}/brave:beta
+            ${{ vars.DOCKERHUB_USERNAME }}/brave:${{ needs.get_pkg_version.outputs.PKG_VER }}
