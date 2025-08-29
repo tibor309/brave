@@ -11,4 +11,4 @@
 To use this version of the app, change the docker image tag to `nightly`. For setup options and configuration, check the [main page][main].
 
 > [!WARNING]
-> Automatic builds has been paused for this version, due to lack of interest. If you need an updated version, you'll need to rebuild the image yourself!
+> This version of the browser will be removed soon! If you still use this version, clone this project and build your own image!
