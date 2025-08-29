@@ -6,8 +6,8 @@ LABEL maintainer="tibor309"
 LABEL release_channel="nightly"
 LABEL org.opencontainers.image.authors="Tibor (https://github.com/tibor309)"
 LABEL org.opencontainers.image.created="${IMAGE_BUILD_DATE}"
-LABEL org.opencontainers.image.title="Brave"
-LABEL org.opencontainers.image.description="Web accessible Brave browser."
+LABEL org.opencontainers.image.title="Brave Nightly"
+LABEL org.opencontainers.image.description="Web accessible Brave browser"
 LABEL org.opencontainers.image.source="https://github.com/tibor309/brave"
 LABEL org.opencontainers.image.url="https://github.com/tibor309/brave/packages"
 LABEL org.opencontainers.image.licenses="GPL-3.0"
@@ -25,13 +25,6 @@ ENV TITLE="Brave Nightly"
 ARG DEBIAN_FRONTEND="noninteractive"
 
 RUN \
-  echo "**** add icon ****" && \
-  curl -o \
-    /usr/share/selkies/www/icon.png \
-    https://raw.githubusercontent.com/tibor309/icons/refs/heads/main/brave-nightly/icon.png && \
-  curl -o \
-    /usr/share/selkies/www/favicon.ico \
-    https://raw.githubusercontent.com/tibor309/icons/refs/heads/main/brave-nightly/favicon.ico && \
   echo "**** install packages ****" && \
   curl -fsSLo \
     /usr/share/keyrings/brave-browser-nightly-archive-keyring.gpg \
