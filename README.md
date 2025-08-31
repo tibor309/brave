@@ -1,6 +1,6 @@
 # 🦁 [Brave](https://github.com/tibor309/brave)
 
-This container allows you to use the [Brave](https://brave.com/) web browser trough another web browser. Brave is a fast, private and secure web browser for PC, Mac and mobile.
+This container allows you to use the [Brave](https://brave.com/) web browser trough another web browser using KasmVNC. Brave is a fast, private and secure web browser for PC, Mac and mobile.
 
 ![brave](https://github.com/user-attachments/assets/8573341d-d7a2-403c-8ddd-4edf7e7172a3)
 
@@ -64,7 +64,7 @@ By default, this container has no authentication. Configure the optional environ
 
 ## Config
 
-Containers are configured using parameters passed at runtime (such as those above). These parameters are separated by a colon and indicate `<external>:<internal>` respectively. For example, `-p 8080:80` would expose port `80` from inside the container to be accessible from the host's IP on port `8080` outside the container. Further options can be found on the [Selkies Base Images](https://github.com/linuxserver/docker-baseimage-selkies#options) repo.
+Containers are configured using parameters passed at runtime (such as those above). These parameters are separated by a colon and indicate `<external>:<internal>` respectively. For example, `-p 8080:80` would expose port `80` from inside the container to be accessible from the host's IP on port `8080` outside the container. Further options can be found on the [KasmVNC Base Images](https://github.com/linuxserver/docker-baseimage-kasmvnc#options) repo.
 
 | Parameter | Function |
 | :----: | --- |
