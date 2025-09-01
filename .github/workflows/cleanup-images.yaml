@@ -61,7 +61,7 @@ jobs:
           echo "Fetching package versions..."
           response=$(curl -s -H "Authorization: Bearer ${GITHUB_TOKEN}" \
             -H "Accept: application/vnd.github+json" \
-            "https://api.github.com/orgs/${{ github.repository_owner }}/packages/container/brave/versions?per_page=100")
+            "https://api.github.com/users/${{ github.repository_owner }}/packages/container/brave/versions?per_page=100")
           
           # Check for API errors
           if echo "$response" | jq -e '.message' > /dev/null 2>&1; then
