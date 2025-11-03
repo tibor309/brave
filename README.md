@@ -8,9 +8,6 @@ This container allows you to use the [Brave](https://brave.com/) web browser tro
 
 To set up the container, you can use docker-compose or the docker cli. Unless a parameter is flagged as 'optional', it is *mandatory* and a value must be provided. This container is using a linuxserver.io base, so you can use their [mods](https://github.com/linuxserver/docker-mods) and configurations to enable additional functionality within the container.
 
-> [!NOTE]
-> This image is also available on [Docker Hub](https://hub.docker.com/r/tibordev/brave) under `tibordev/brave`.
-
 ### [docker-compose](https://docs.linuxserver.io/general/docker-compose) (recommended)
 
 ```yaml
