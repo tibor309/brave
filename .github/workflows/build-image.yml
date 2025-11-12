@@ -75,3 +75,7 @@ jobs:
           tags: |
             ghcr.io/${{ github.repository_owner }}/brave:latest
             ghcr.io/${{ github.repository_owner }}/brave:${{ needs.version.outputs.package_version }}
+          labels: |
+            org.opencontainers.image.ref.name=${{ github.ref }}
+            org.opencontainers.image.revision=${{ github.sha }}
+            org.opencontainers.image.version=${{ needs.version.outputs.package_version }}
