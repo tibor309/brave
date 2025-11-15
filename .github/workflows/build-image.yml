@@ -56,6 +56,12 @@ jobs:
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Login to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ vars.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
 
@@ -74,6 +80,8 @@ jobs:
           tags: |
             ghcr.io/${{ github.repository_owner }}/brave:latest
             ghcr.io/${{ github.repository_owner }}/brave:${{ needs.version.outputs.package_version }}
+            ${{ vars.DOCKERHUB_USERNAME }}/brave:latest
+            ${{ vars.DOCKERHUB_USERNAME }}/brave:${{ needs.version.outputs.package_version }}
           labels: |
             org.opencontainers.image.ref.name=${{ github.ref }}
             org.opencontainers.image.revision=${{ github.sha }}
