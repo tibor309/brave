@@ -1,4 +1,4 @@
-# 🦁 [Brave](https://github.com/tibor309/brave)
+# 🦁 Brave
 
 This container allows you to use the [Brave](https://brave.com/) web browser trough another web browser using KasmVNC. Brave is a fast, private and secure web browser for PC, Mac and mobile.
 
@@ -14,7 +14,7 @@ To set up the container, you can use docker-compose or the docker cli. Unless a 
 ---
 services:
   brave:
-    image: ghcr.io/tibor309/brave:latest
+    image: ghcr.io/tibynx/brave:latest
     container_name: brave-browser
     security_opt:
       - seccomp:unconfined #optional
@@ -49,7 +49,7 @@ docker run -d \
   --shm-size="1gb" \
   --restart unless-stopped \
   --hostname brave `#optional` \
-  ghcr.io/tibor309/brave:latest
+  ghcr.io/tibynx/brave:latest
 ```
 
 ## Security
