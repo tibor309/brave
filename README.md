@@ -14,7 +14,7 @@ To set up the container, you can use docker-compose or the docker cli. Unless a 
 ---
 services:
   brave:
-    image: ghcr.io/tibynx/brave:latest
+    image: tibynx/brave:latest
     container_name: brave-browser
     security_opt:
       - seccomp:unconfined #optional
@@ -49,7 +49,7 @@ docker run -d \
   --shm-size="1gb" \
   --restart unless-stopped \
   --hostname brave `#optional` \
-  ghcr.io/tibynx/brave:latest
+  tibynx/brave:latest
 ```
 
 ## Security
