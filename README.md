@@ -2,7 +2,7 @@
 
 This container allows you to use the [Brave](https://brave.com/) web browser trough another web browser using KasmVNC. Brave is a fast, private and secure web browser for PC, Mac and mobile.
 
-![brave](https://github.com/user-attachments/assets/8573341d-d7a2-403c-8ddd-4edf7e7172a3)
+![brave](.github/preview.png)
 
 ## Setup
 
